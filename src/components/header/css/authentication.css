@@ -1,11 +1,12 @@
 button.register{
     background-color: #153243;
-    width: 250px;
+    width: 125px;
     height: 50px;
     
     border:0px;
     border-radius: 10px;
     color: #fff;
+    cursor: pointer;
 }
 
 button.login{
@@ -14,12 +15,24 @@ button.login{
     
     border: 2px solid #153243;
     border-radius: 10px;
+    cursor: pointer;
+
+    background-color: transparent;
+    color: #153243;
+}
+
+.register:hover{
+    background-color: #102736;
+}
+
+.login:hover{
+    background-color: #153243;
+    color: #fff;
 }
 
 .Authentication-header{
-    gap: 20px;
+    width: 400px;
+    justify-content: space-between;
+    display: flex;
 }
 
-.Authentication {
-    gap: 20px;
-}

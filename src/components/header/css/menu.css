@@ -1,27 +1,64 @@
-.Menu-header {
-    width: 100%;
-    justify-items: center;
+.Menu-header ul{
     align-items: center;
+    display: flex;
+    gap: 20px;
+
+    width: auto;
 }
 
 ul {
     list-style-type: none;
-    width: 100%;
-    display: flex;
 }
 
 li {
+    display: flex;
+    width: 150px;
+    height: 50px;
+
     list-style-type: none;
-    width: 15%;
-    /*width: min-content;*/
+
+    align-items: center;
+    justify-content: center;  
+}
+
+li:hover {
+    border: 2px solid #153243;
+    border-radius: 50px;
+
+    transform: rotate(345deg);
 }
 
 a {
     text-decoration: none;
+    color: #153243;
 }
 
-/*
-Menu = 4
-Logo = 1
-Authentication = 2
-*/
+li.red:hover a.red {
+    color: #DF2935;
+}
+li.green:hover a.green {
+    color: #04E762;
+}
+li.blue:hover a.blue {
+    color: #3772FF;
+}
+li.yellow:hover a.yellow {
+    color: #FDCA40;
+}
+
+li.red:hover{
+    border-color: #DF2935;
+    color: #DF2935;
+}
+li.green:hover{
+    border-color: #04E762;
+    color: #04E762;
+}
+li.blue:hover{
+    border-color: #3772FF;
+    color: #3772FF;
+}
+li.yellow:hover{
+    border-color: #FDCA40;
+    color: #FDCA40;
+}
