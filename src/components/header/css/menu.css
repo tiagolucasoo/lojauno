@@ -1,0 +1,27 @@
+.Menu-header {
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+}
+
+li {
+    list-style-type: none;
+    width: 15%;
+    /*width: min-content;*/
+}
+
+a {
+    text-decoration: none;
+}
+
+/*
+Menu = 4
+Logo = 1
+Authentication = 2
+*/

@@ -1,0 +1,25 @@
+button.register{
+    background-color: #153243;
+    width: 250px;
+    height: 50px;
+    
+    border:0px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+button.login{
+    width: 250px;
+    height: 50px;
+    
+    border: 2px solid #153243;
+    border-radius: 10px;
+}
+
+.Authentication-header{
+    gap: 20px;
+}
+
+.Authentication {
+    gap: 20px;
+}
