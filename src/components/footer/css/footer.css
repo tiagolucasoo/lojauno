@@ -1,0 +1,14 @@
+.Footer-container {
+    margin-top: 50px;
+    width: 100%;
+    padding: 10px 20px;
+
+    background-color: #f3f3f3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    gap: 100px;
+}
