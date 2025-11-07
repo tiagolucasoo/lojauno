@@ -18,13 +18,16 @@ li {
     list-style-type: none;
 
     align-items: center;
-    justify-content: center;  
+    justify-content: center;
+
+    /*transition: transform 2.4s linear;*/
 }
 
 li:hover {
     border: 2px solid #153243;
     border-radius: 50px;
 
+    
     transform: rotate(345deg);
 }
 

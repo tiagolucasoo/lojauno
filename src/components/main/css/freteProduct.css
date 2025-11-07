@@ -1,0 +1,29 @@
+button.frete{
+    width: 250px;
+    height: 50px;
+    
+    border: 2px solid #3772FF;
+    border-radius: 10px;
+    cursor: pointer;
+
+    background-color: transparent;
+    color: #3772FF;
+}
+
+.frete:hover{
+    background-color: #1D5ACF;
+    color: #fff;
+}
+
+input {
+    margin-top: 20px;
+    width: 250px;
+    height: 50px;
+
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px;
+}
+
+h3 {
+    margin-top: 20px;
+}

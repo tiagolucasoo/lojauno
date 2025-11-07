@@ -1,11 +1,11 @@
 button.register{
-    background-color: #153243;
+    background-color: #04E762;
     width: 125px;
     height: 50px;
     
     border:0px;
     border-radius: 10px;
-    color: #fff;
+    color: #004D22;
     cursor: pointer;
 }
 
@@ -13,20 +13,21 @@ button.login{
     width: 250px;
     height: 50px;
     
-    border: 2px solid #153243;
+    border: 2px solid #3772FF;
     border-radius: 10px;
     cursor: pointer;
 
     background-color: transparent;
-    color: #153243;
+    color: #3772FF;
 }
 
 .register:hover{
-    background-color: #102736;
+    background-color: #00B34A;
+    color: #fff;
 }
 
 .login:hover{
-    background-color: #153243;
+    background-color: #1D5ACF;
     color: #fff;
 }
 
