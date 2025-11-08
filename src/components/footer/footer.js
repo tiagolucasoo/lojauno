@@ -2,7 +2,7 @@ import LogoMono from "./logoMono";
 
 import './css/footer.css'
 import RedesSociais from "./redesSociais";
-import MenuRodape from "./menuRodape";
+import Mapa from "./mapa";
 import Development from "./devlopment";
 import MarcasPrincipais from "./marcarPrincipais";
 
@@ -13,10 +13,10 @@ function Footer() {
         <LogoMono/>
         <MarcasPrincipais/>
         <RedesSociais/>
-        <MenuRodape/>
+        <Mapa/>
       </footer>
 
-      <footer>
+      <footer className="Dev-container">
         <Development/>
       </footer>
 

@@ -23,11 +23,9 @@ li {
     /*transition: transform 2.4s linear;*/
 }
 
-li:hover {
+li.red:hover, li.blue:hover, li.green:hover, li.yellow:hover {
     border: 2px solid #153243;
     border-radius: 50px;
-
-    
     transform: rotate(345deg);
 }
 
