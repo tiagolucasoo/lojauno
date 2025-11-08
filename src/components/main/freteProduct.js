@@ -13,11 +13,20 @@ function FreteProduct() {
         </div>
 
         <div className="InfoFrete">
-          <div className="Fretecidade">
-            <strong>Cidade</strong>
-            <p className='TextCidade'>Londrina - PR</p>
+          <div className="Freteestado">
+            <strong>UF</strong>
+            <p className='TextEstado'>PR</p>
           </div>
 
+          <div className="Fretecidade">
+            <strong>Cidade</strong>
+            <p className='TextCidade'>Londrina</p>
+          </div>
+
+          <div className="Fretebairro">
+            <strong>Bairro</strong>
+            <p className='TextBairro'>Jardim do Sol</p>
+          </div>
           <div className="Fretecusto">
             <strong>Custo</strong>
             <p className='TextCusto'>R$10,00</p>

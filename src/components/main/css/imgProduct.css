@@ -4,3 +4,11 @@ img {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 20px;
 }
+
+
+@media (max-width: 992px) {
+    img {
+        width: 100%;
+        height: auto;
+    }
+}

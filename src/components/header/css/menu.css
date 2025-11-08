@@ -63,3 +63,13 @@ li.yellow:hover{
     border-color: #FDCA40;
     color: #FDCA40;
 }
+
+@media (max-width: 992px) {
+    .Menu-header ul {
+        align-items: center;
+        display: flex;
+        gap: 20px;
+        width: auto;
+        margin-top: 20px;
+    }
+}

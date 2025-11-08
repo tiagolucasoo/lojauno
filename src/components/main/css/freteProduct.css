@@ -1,6 +1,3 @@
-/* * {
-    border: 1px solid #ff0066;
-} */
 button.frete{
     width: 225px;
     height: 50px;
@@ -51,33 +48,53 @@ h3 {
     justify-content: space-between;
 }
 
-.InfoFrete{
+.InfoFrete {
     width: 100%;
-    height: 50px;
     margin-top: 50px;
 
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
-.Fretecidade{
+.Fretecidade, .Freteprazo, .Fretebairro, .TextCidade, .TextPrazo, .TextBairro{
     width: 200px;
     text-align: center;
 }
-.Fretecusto{
-    width: 200px;
-    text-align: center;
-}
-.Freteprazo{
-    width: 200px;
-    text-align: center;
-}
-
-.TextPrazo, .TextCusto, .TextCidade{
-    width: 200px;
+.Fretecusto, .Freteestado, .Textcusto, .TextEstado{
+    width: 100px;
     text-align: center;
 }
 
 strong:hover, h3:hover{
     color: #3772FF;
+}
+
+
+@media (max-width: 992px) {
+    .Subcontainer {
+        gap: 10px;
+    }
+    .InfoFrete {
+        flex-wrap: wrap;
+    }
+
+    button.frete {
+        width: 175px
+    }
+    button.limpar {
+        width: 100px;
+    }
+
+    .Freteestado{
+        width: 20%;
+    }
+    .Fretecidade, .Fretebairro{
+        width: 40%;
+    }
+
+    .Fretecusto {
+        width: 30%;
+    }
+    .Freteprazo {
+        width: 70%;
+    }
 }

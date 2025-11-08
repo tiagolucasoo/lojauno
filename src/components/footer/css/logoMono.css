@@ -1,8 +1,16 @@
 .LogoMono {
     background-image: url('/public/logoMono.png');
-    width: 100px;
-    height: 50px;
+    width: 125px;
+    height: 75px;
 
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+@media (max-width: 992px) {
+    .LogoMono {
+        width: 100%;
+        background-position: center;
+        margin-top: 20px;
+    }
 }

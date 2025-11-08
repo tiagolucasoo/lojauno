@@ -1,23 +1,30 @@
-button.register{
-    background-color: #04E762;
-    width: 125px;
-    height: 50px;
-    
-    border:0px;
-    border-radius: 10px;
-    color: #004D22;
+/* Conf Padrões para os buttons */
+button {
     cursor: pointer;
+    height: 50px;
+    border-radius: 10px;
+}
+button.mode, button.login{
+    background-color: transparent;
 }
 
+.icon {
+    width: 70%;
+    height: auto;
+}
+
+button.mode{
+    border: 2px solid #FDCA40;
+    width: 50px;
+}
+button.register{
+    background-color: #04E762;
+    width: 150px;
+    color: #004D22;
+}
 button.login{
     width: 250px;
-    height: 50px;
-    
     border: 2px solid #3772FF;
-    border-radius: 10px;
-    cursor: pointer;
-
-    background-color: transparent;
     color: #3772FF;
 }
 
@@ -25,15 +32,24 @@ button.login{
     background-color: #00B34A;
     color: #fff;
 }
-
 .login:hover{
     background-color: #1D5ACF;
     color: #fff;
 }
 
 .Authentication-header{
-    width: 400px;
+    width: 500px;
     justify-content: space-between;
     display: flex;
+}
+
+@media (max-width: 992px) {
+    .Authentication-header{
+        width: 100%;
+        margin-top: 20px;
+        justify-content: space-between;
+        display: flex;
+        gap: 20px;
+    }
 }
 

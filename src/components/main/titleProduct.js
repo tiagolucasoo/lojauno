@@ -1,4 +1,4 @@
-import './css/imgProduct.css';
+import './css/titleProduct.css';
 
 function TitleProduct() {
   return (

@@ -1,7 +1,10 @@
 * {
-  /* border: 1px solid #ff0066; */
   margin: 0;
   padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 .App {

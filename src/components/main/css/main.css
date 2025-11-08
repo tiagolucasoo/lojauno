@@ -10,3 +10,10 @@
     box-sizing: border-box;
     gap: 100px;
 }
+
+
+@media (max-width: 992px) {
+    .Main-container {
+        display: block;
+    }
+}

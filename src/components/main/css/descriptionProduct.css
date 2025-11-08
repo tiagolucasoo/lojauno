@@ -3,3 +3,10 @@ p {
     width: 600px;
     text-align: justify;
 }
+
+
+@media (max-width: 992px) {
+    p {
+        width: 100%;
+    }
+}
