@@ -2,10 +2,11 @@ function RedesSociais() {
   return (
     <div className="RedesSociais">
       <footer className="RedesSociais-footer">
-        <p>Instagram</p>
-        <p>Facebook</p>
-        <p>Youtube</p>
-        <p>PlayStore</p>
+        <h3>Redes Sociais</h3>
+        <li>Instagram</li>
+        <li>Facebook</li>
+        <li>Youtube</li>
+        <li>PlayStore</li>
       </footer>
     </div>
   );

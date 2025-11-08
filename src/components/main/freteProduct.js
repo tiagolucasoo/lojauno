@@ -9,7 +9,9 @@ function FreteProduct() {
         <div className="Subcontainer">
           <input placeholder='Digite aqui o cep'></input>
           <button className="frete">Consultar</button>
+          <button className="limpar">Limpar</button>
         </div>
+
         <div className="InfoFrete">
           <div className="Fretecidade">
             <strong>Cidade</strong>
