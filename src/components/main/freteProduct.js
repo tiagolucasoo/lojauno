@@ -21,7 +21,7 @@ function FreteProduct() {
       return 'Gratuito'
     }
 
-    if (dados.localizacao === ORIGEM.cidade) {
+    if (dados.cidade === ORIGEM.cidade) {
       return 'R$5,00'
     }
 
@@ -46,11 +46,13 @@ function FreteProduct() {
 
     try {
       const response = await fetch(url);
-      const data = await response.json();
       if (!response.ok) {
-        throw new Error(data.error || 'Erro ao buscar o CEP.')
+        throw new Error(`Erro: ${response.status} ${response.statusText}`)
       }
+
+      const data = await response.json();
       const custoFrete = consultarValores(cep, data)
+
       setLocalizacao(`${data.bairro} - ${data.cidade}, ${data.uf}`)
       setCusto(custoFrete)}
 
