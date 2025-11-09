@@ -41,7 +41,8 @@ function FreteProduct() {
     setLocalizacao(null)
     setErro(null)
     setCusto(null)
-    const url = `http://localhost:3001/api/cep/${cep}`
+    /* const url = `http://localhost:3001/api/cep/${cep}` */ 
+    const url = `/api/cep/${cep}`
 
     try {
       const response = await fetch(url);
