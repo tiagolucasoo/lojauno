@@ -1,5 +1,5 @@
 import './css/freteProduct.css';
-import { useState } from 'react';
+import { use, useState } from 'react';
 
 function FreteProduct() {
   const [cep, setCep] = useState('')
@@ -7,6 +7,11 @@ function FreteProduct() {
   const [erro, setErro] = useState(null)
   const [loading, setLoading] = useState(false)
   const [custo, setCusto] = useState(null)
+  const [prazo, setPrazo] = useState(null)
+
+  const [titleLocal, setTitleLocal] = useState(null)
+  const [titleCusto, setTitleCusto] = useState(null)
+  const [titlePrazo, setTitlePrazo] = useState(null)
 
   const consultarValores = (cepDestino, dados) => {
     const ORIGEM = {
@@ -18,22 +23,38 @@ function FreteProduct() {
     const cepDestino2 = cepDestino.replace(/\D/g, '');
 
     if (cepDestino2 === ORIGEM.cep) {
-      return 'Gratuito'
+      return { custo: 'Gratuito', prazo: 'Até 5 horas'}
     }
 
     if (dados.cidade === ORIGEM.cidade) {
-      return 'R$5,00'
+      return { custo: 'R$5,00', prazo: '1 dia útil' }
     }
 
     if (dados.ddd === ORIGEM.ddd) {
-      return 'R$7,00'
+      return { custo: 'R$7,00', prazo: '2-3 dias úteis' }
     }
 
     if (dados.uf === ORIGEM.uf) {
-      return 'R$10,00'
+      return { custo: 'R$10,00', prazo: '3-5 dias úteis' }
     }
 
-    return 'R$15,00'
+    return { custo: 'R$15,00', prazo: '5-10 dias úteis' }
+  }
+
+  const atualizarCep = (e) => {
+    const novoCep = e.target.value
+    setCep(novoCep)
+
+    if (novoCep === '') {
+      setLocalizacao(null)
+      setCusto(null)
+      setPrazo(null)
+      setErro(null)
+
+      setTitleCusto(null)
+      setTitleLocal(null)
+      setTitlePrazo(null)
+    }
   }
 
   const consultarFrete = async () => {
@@ -41,8 +62,12 @@ function FreteProduct() {
     setLocalizacao(null)
     setErro(null)
     setCusto(null)
-    /* const url = `http://localhost:3001/api/cep/${cep}` */ 
-    const url = `/api/cep/${cep}`
+    setPrazo(null)
+
+    setTitleCusto(null)
+    setTitleLocal(null)
+    setTitlePrazo(null)
+    const url = `https://viacep.com.br/ws/${cep}/json/`;
 
     try {
       const response = await fetch(url);
@@ -51,10 +76,21 @@ function FreteProduct() {
       }
 
       const data = await response.json();
-      const custoFrete = consultarValores(cep, data)
+      const frete = consultarValores(cep, data)
+      
+      setTitleCusto(`Custo`)
+      setTitleLocal(`Local`)
+      setTitlePrazo(`Prazo`)
 
-      setLocalizacao(`${data.bairro} - ${data.cidade}, ${data.uf}`)
-      setCusto(custoFrete)}
+      if (data.bairro === '') {
+        setLocalizacao(`${data.localidade}, ${data.uf}`)
+      }
+      if (data.bairro) {
+        setLocalizacao(`${data.bairro} - ${data.localidade}, ${data.uf}`)
+      }
+
+      setCusto(frete.custo)
+      setPrazo(frete.prazo)}
 
     catch (error) {
       setErro(error.message)} 
@@ -72,7 +108,7 @@ function FreteProduct() {
           <input
           placeholder='Digite aqui o cep'
           value ={cep}
-          onChange={(e) => setCep(e.target.value)}/>
+          onChange={atualizarCep}/>
 
           <button className="frete"
           onClick={consultarFrete}>Consultar</button>
@@ -80,7 +116,10 @@ function FreteProduct() {
 
         <div className="InfoFrete">
           <div className="Fretelocalizacao">
-            <strong>Local</strong>
+            <strong>
+              {loading && ''}
+              {titleLocal && titleLocal}
+            </strong>
             <p className='TextLocalizacao'>
               {loading && 'Consultando'}
               {erro && <span style={{color: 'red'}}>{erro}</span>}
@@ -90,18 +129,29 @@ function FreteProduct() {
           </div>
 
           <div className="Fretecusto">
-            <strong>Custo</strong>
+            <strong>
+              {loading && ''}
+              {titleCusto && titleCusto}
+            </strong>
             <p className='TextCusto'>
-              {loading && '---'}
-              {erro && '---'}
+              {loading && ''}
+              {erro && ''}
               {custo && custo}
               {!loading && !erro && custo === null && ''}
             </p>
           </div>
 
           <div className="Freteprazo">
-            <strong>Prazo</strong>
-            <p className='TextPrazo'>3 à 5 dias úteis</p>
+            <strong>
+              {loading && ''}
+              {titlePrazo && titlePrazo}
+            </strong>
+            <p className='TextPrazo'>
+              {loading && ''}
+              {erro && ''}
+              {prazo && prazo}
+              {!loading && !prazo && prazo === null && ''}
+            </p>
           </div>
         </div>
 
