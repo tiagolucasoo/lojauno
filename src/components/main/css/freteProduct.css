@@ -2,16 +2,7 @@ button.frete{
     width: 225px;
     height: 50px;
     border-radius: 10px;
-    cursor: pointer;
-
-    background-color: #1D5ACF;
-    color: #fff;
-    
-}
-button.limpar{
-    width: 75px;
-    height: 50px;
-    border-radius: 10px;
+    border: none;
     cursor: pointer;
 
     background-color: #1D5ACF;
@@ -28,7 +19,7 @@ button.limpar{
 input {
     width: 275px;
     height: 50px;
-
+    border: none;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 10px;
     text-align: center;
@@ -55,11 +46,11 @@ h3 {
     display: flex;
     justify-content: space-between;
 }
-.Fretecidade, .Freteprazo, .Fretebairro, .TextCidade, .TextPrazo, .TextBairro{
+.Fretelocalizacao, .Freteprazo, .TextPrazo{
     width: 200px;
     text-align: center;
 }
-.Fretecusto, .Freteestado, .Textcusto, .TextEstado{
+.Fretecusto, .Textcusto{
     width: 100px;
     text-align: center;
 }
@@ -68,6 +59,10 @@ strong:hover, h3:hover{
     color: #3772FF;
 }
 
+/* Fretelocalizacao | TextLocalizacao
+    Custo
+    Prazo
+*/
 
 @media (max-width: 992px) {
     .Subcontainer {
@@ -80,21 +75,21 @@ strong:hover, h3:hover{
     button.frete {
         width: 175px
     }
-    button.limpar {
-        width: 100px;
-    }
 
-    .Freteestado{
-        width: 20%;
-    }
-    .Fretecidade, .Fretebairro{
-        width: 40%;
+    .Fretelocalizacao{
+        width: 100%;
     }
 
     .Fretecusto {
-        width: 30%;
+        width: 40%;
     }
     .Freteprazo {
-        width: 70%;
+        width: 60%;
     }
+
+    .TextPrazo, .TextCusto, .TextLocalizacao {
+        width: 100%;
+        text-align: center;
+    }
+
 }

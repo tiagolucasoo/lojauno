@@ -68,8 +68,13 @@ li.yellow:hover{
     .Menu-header ul {
         align-items: center;
         display: flex;
-        gap: 20px;
+        gap: 1%;
         width: auto;
         margin-top: 20px;
+    }
+
+    li.blue, li.red, li.yellow, li.green {
+        width: 26%;
+        font-size: 1rem;
     }
 }

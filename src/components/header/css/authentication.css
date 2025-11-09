@@ -13,10 +13,6 @@ button.mode, button.login{
     height: auto;
 }
 
-button.mode{
-    border: 2px solid #FDCA40;
-    width: 50px;
-}
 button.register{
     background-color: #04E762;
     width: 150px;
@@ -38,7 +34,8 @@ button.login{
 }
 
 .Authentication-header{
-    width: 500px;
+    width: 100%;
+    gap: 10%;
     justify-content: space-between;
     display: flex;
 }
@@ -49,7 +46,14 @@ button.login{
         margin-top: 20px;
         justify-content: space-between;
         display: flex;
-        gap: 20px;
+        gap: 5%;
+    }
+
+    button.register {
+        width: 40%;
+    }
+    button.login {
+        width: 55%;
     }
 }
 
