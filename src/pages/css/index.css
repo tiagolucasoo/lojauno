@@ -1,0 +1,17 @@
+.lancamentos {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.destaque {
+    width: 100%;
+    height: 200px;
+    background-color: #ff0066;
+    z-index: 1;
+}
+
+.tituloSlide{
+    z-index: 5;
+}

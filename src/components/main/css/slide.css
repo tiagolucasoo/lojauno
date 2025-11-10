@@ -1,0 +1,90 @@
+* {
+    border: 0px solid #ff0066;
+}
+.Slide {
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.modeloSlide {
+    width: 100%;
+    min-height: 400px;
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    box-sizing: border-box;
+    padding: 50px;
+}
+
+.slide-conteudo {
+    background-color: transparent;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.tituloSlide {
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    background-color: transparent;
+    text-shadow: 2px 3px 2px #000;
+    color: #fff;
+}
+
+.swiper-pagination {
+    background-color: transparent;
+    border: none;
+}
+
+.swiper-pagination-bullet {
+    background-color: #ff0066;
+    border: 3px solid #fff;
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 992px) { /* Este valor deve ser 1px a menos que seu 1º breakpoint (768px) */
+
+    .Slide {
+        /* No celular, o slide ocupa a tela toda, sem bordas ou margens */
+        width: 100%;
+        max-width: 400px;
+        margin: 0; /* Remove margens */
+        border-radius: 0; /* Remove bordas arredondadas */
+        box-shadow: none;
+    }
+
+    .modeloSlide {
+        /* Uma altura menor para não ocupar a tela inteira */
+        min-height: 250px; 
+    }
+
+    .slide-conteudo h2 {
+        /* Opcional: diminui o texto no celular */
+        font-size: 1.5rem;
+    }
+
+    .slide-conteudo p {
+        font-size: 0.9rem;
+    }
+
+    /* Opcional: Esconder as setas no celular (é difícil de clicar) */
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+}

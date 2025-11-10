@@ -25,7 +25,6 @@ li.red:hover, li.blue:hover, li.green:hover, li.yellow:hover {
     border: 2px solid #153243;
     border-radius: 50px;
     transform: rotate(345deg);
-    transition: all 0.5s ease;
 }
 
 a {

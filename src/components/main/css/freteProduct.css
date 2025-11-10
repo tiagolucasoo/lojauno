@@ -1,5 +1,6 @@
 button.frete{
-    width: 225px;
+    margin-top: 20px;
+    width: 100%;
     height: 50px;
     border-radius: 10px;
     border: none;
@@ -18,7 +19,7 @@ button.frete{
 }
 
 input {
-    width: 275px;
+    width: 100%;
     height: 50px;
     border: none;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;

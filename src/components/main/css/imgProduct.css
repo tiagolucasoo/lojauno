@@ -5,10 +5,19 @@ img {
     border-radius: 20px;
 }
 
+.produtoIndex {
+    width: 200px;
+    height: auto;
+}
+
 
 @media (max-width: 992px) {
     img {
         width: 100%;
+        height: auto;
+    }
+    .produtoIndex {
+        width: 40%;
         height: auto;
     }
 }
