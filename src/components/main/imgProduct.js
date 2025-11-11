@@ -1,10 +1,10 @@
 import './css/imgProduct.css';
 
-function ImgProduct() {
+function ImgProduct({image, alt}) {
   return (
     <div className="ImgProduct">
       <main className="ImgProduct-main">
-        <img src="product1.png"></img>
+        <img src={image} alt={alt}></img>
       </main>
     </div>
   );

@@ -1,0 +1,20 @@
+.nomeProduto2{
+    font-size: large;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 20px;
+}
+
+.idProduto{
+    font-size: small;
+}
+
+.boxList {
+    height: 280px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 2px;
+}
+
+.boxList:hover {
+    box-shadow: rgba(149, 157, 165, 0.8) 0px 8px 24px;
+}

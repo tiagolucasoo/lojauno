@@ -1,8 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  border: 0px solid #ff0066;
-  background-color: #fff;
 }
 
 *, *::before, *::after {
@@ -13,9 +11,4 @@
   text-align: center;
   display: flex;
   align-items: center;
-}
-
-.App-header {
-  width: 100%;
-  background-color: #fff;
 }

@@ -1,10 +1,11 @@
 import './css/titleProduct.css';
 
-function TitleProduct() {
+function TitleProduct({name, price}) {
   return (
     <div className="ImgProduct">
       <main className="TitleProduct-main">
-        <h1>Jogo de Cartas Uno Original</h1>
+        <h1 className='tituloProduto'>{name}</h1>
+        <h1 className='custoProduto'>{price}</h1>
       </main>
     </div>
   );

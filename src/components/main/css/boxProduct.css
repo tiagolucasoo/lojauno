@@ -1,0 +1,28 @@
+.BoxProduct {
+    width: 70vw; /* Ocupa 100% da largura do pai */
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 15vw;
+    overflow: hidden; 
+}
+
+.precoProduto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #DF2935;
+    border-radius: 50px;
+    width: 100%;
+    height: 50px;
+    color: #DF2935;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+}
+
+.nomeProduto{
+    margin-top: 20px;
+    height: 70px;
+    background-color: transparent;
+    flex-wrap: wrap;
+}

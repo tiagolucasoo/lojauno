@@ -1,8 +1,5 @@
-.lancamentos {
-    width: 100%;
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
+.vendidos {
+    margin-top: 40px;
 }
 
 .destaque {
@@ -14,4 +11,13 @@
 
 .tituloSlide{
     z-index: 5;
+}
+
+.promocao {
+    margin-top: 40px;
+}
+
+.descricaoBox{
+    width: 99vw;
+    margin-top: 80px;
 }
