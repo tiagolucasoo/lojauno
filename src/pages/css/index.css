@@ -1,5 +1,6 @@
 .vendidos {
     margin-top: 40px;
+
 }
 
 .destaque {
@@ -11,6 +12,9 @@
 
 .tituloSlide{
     z-index: 5;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }
 
 .promocao {

@@ -18,7 +18,7 @@ function Index() {
             <BoxProduct/>
         </div>
 
-        <h2 className="descricaoBox">Produtos em Promoção</h2>
+        <h2 className="descricaoBox" id="itens-promocionais">Produtos em Promoção</h2>
         <div className="promocao">
             <BoxProduct/>
         </div>

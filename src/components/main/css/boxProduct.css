@@ -1,7 +1,5 @@
 .BoxProduct {
-    width: 70vw; /* Ocupa 100% da largura do pai */
-    /*justify-content: center;*/
-    /*margin-top: 20px;*/
+    width: 70vw;
     margin-left: 15vw;
 
 }
@@ -10,11 +8,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 3px solid #DF2935;
+    border: 3px solid #3772FF;
     border-radius: 50px;
     width: 100%;
     height: 50px;
-    color: #DF2935;
+    color: #3772FF;
 
     font-family: Arial, Helvetica, sans-serif;
     font-size: x-large;

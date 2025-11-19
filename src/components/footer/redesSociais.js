@@ -6,8 +6,7 @@ function RedesSociais() {
         <ul className="mapaFooter">
           <li>Instagram</li>
           <li>Facebook</li>
-          <li>Youtube</li>
-          <li>PlayStore</li>
+          <li>Threads</li>
         </ul>
       </footer>
     </div>
