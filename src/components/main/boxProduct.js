@@ -17,7 +17,28 @@ function BoxProduct() {
         navigation={true}
         spaceBetween={30}
         loop={true}
-        slidesPerView={4} 
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          480: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+          1280: {
+            slidesPerView: 5,
+            spaceBetween: 30
+          },
+        }}
       >
         
         {products.map((product) => (

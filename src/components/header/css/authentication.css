@@ -3,6 +3,7 @@ button {
     cursor: pointer;
     height: 50px;
     border-radius: 10px;
+    border: none;
 }
 button.mode, button.login{
     background-color: transparent;

@@ -1,9 +1,9 @@
 .BoxProduct {
     width: 70vw; /* Ocupa 100% da largura do pai */
-    justify-content: center;
-    margin-top: 20px;
+    /*justify-content: center;*/
+    /*margin-top: 20px;*/
     margin-left: 15vw;
-    overflow: hidden; 
+
 }
 
 .precoProduto {

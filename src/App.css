@@ -8,6 +8,7 @@
 }
 
 .App {
+  width: 100%;
   text-align: center;
   display: flex;
   align-items: center;

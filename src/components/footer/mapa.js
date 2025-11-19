@@ -3,7 +3,7 @@ function MenuRodape() {
       <div className="MenuRodape">
         <footer className="MenuRodape-footer">
           <h3>Navegação:</h3>
-            <ul>
+            <ul className="mapaFooter">
               <li><a href="">Página Inicial</a></li>
               <li><a href="">Categorias</a></li>
               <li><a href="">Produtos</a></li>
