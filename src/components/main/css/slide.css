@@ -48,33 +48,30 @@
 }
 
 .swiper-pagination-bullet {
-    background-color: #ff0066;
+    background-color: #1D5ACF;
     border: 3px solid #fff;
     width: 20px;
     height: 20px;
 }
 
-@media (max-width: 992px) { /* Este valor deve ser 1px a menos que seu 1º breakpoint (768px) */
+@media (max-width: 992px) {
     .slideMaster{
         width: 100vw;
         margin-top: 20px;
     }
     .Slide {
-        /* No celular, o slide ocupa a tela toda, sem bordas ou margens */
         width: 100%;
         max-width: max-content;
-        margin: 0; /* Remove margens */
-        border-radius: 0; /* Remove bordas arredondadas */
+        margin: 0;
+        border-radius: 0; 
         box-shadow: none;
     }
 
     .modeloSlide {
-        /* Uma altura menor para não ocupar a tela inteira */
         min-height: 250px; 
     }
 
     .slide-conteudo h2 {
-        /* Opcional: diminui o texto no celular */
         font-size: 1.5rem;
     }
 
@@ -82,7 +79,6 @@
         font-size: 0.9rem;
     }
 
-    /* Opcional: Esconder as setas no celular (é difícil de clicar) */
     .swiper-button-next,
     .swiper-button-prev {
         display: none;
