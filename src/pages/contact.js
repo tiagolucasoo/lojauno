@@ -3,6 +3,9 @@ import Header from "../components/header/header";
 import Main from "../components/main/main";
 
 import './css/contact.css';
+function AlertaAuthentication() {
+  return alert('Ops, essa função está em desenvolvimento!')
+}
 
 function Contact() {
   return (
@@ -35,7 +38,7 @@ function Contact() {
             <textarea className="inputMotivo"></textarea>
             </section>
 
-            <button className="enviarForm">Enviar</button>
+            <button className="enviarForm" onClick={AlertaAuthentication}>Enviar</button>
         </div>
 
         <Footer/>

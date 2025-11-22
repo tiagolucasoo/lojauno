@@ -4,6 +4,7 @@ import Index from './pages';
 import Product from './pages/products';
 import Contact from './pages/contact';
 import Catalogo from './pages/catalogo';
+import Vazio from './pages/vazio';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Route path='/catalogo' element = {<Catalogo/>}/>
         <Route path='/produto/:id' element = {<Product/>}/>
         <Route path='/contato' element = {<Contact/>}/>
-        <Route path='*' element={ <h2>Página não encontrada</h2>}/>
+        <Route path='*' element={<Vazio/>}/>
       </Routes>
     </div>
     
