@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# 🛒 Loja UNO - Vitrine Virtual React
+- Uma aplicação web desenvolvida para funcionar como uma vitrine virtual interativa de produtos da marca UNO com uma navegação fluida, visualização detalhada de itens e simulação de cálculo de frete.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📝 Criação do Projeto
+- Desenvolvido como trabalho acadêmico para a disciplina de **Desenvolvimento Web**, este projeto aplica conceitos fundamentais de Front-end utilizando **React JS**. A aplicação foi construída com foco na Componentização e Responsividade.
 
-## Available Scripts
+## ✨ Funcionalidades
+### Navegação:
+- **Carrosséis:** Implementação da biblioteca Swiper para exibir produtos em destaque, categorias de "Mais Vendidos" e "Promoções" na página inicial.
+- **Catálogo:** Página dedicada com a listagem em grade dos produtos disponíveis.
+- **Roteamento:** Navegação instantânea utilizando react-router-dom, sem recarregamento da página.
+### Produtos
+- **Card:** Visualização individual (/produto/:id) contendo detalhes do produto.
+- **Cálculo de Frete Lógico:** Módulo integrado à API ViaCEP que consulta os dados do endereço (Cidade, UF, DDD) a partir do CEP informado.
+    - Como a API retorna apenas a localização, o **cálculo de valores e prazos** é realizado por uma lógica condicional implementada no front-end:
 
-In the project directory, you can run:
+        1. _Verifica se o CEP é igual ao da origem;_
+        2. _Se não, verifica se é a mesma cidade;_
+        3. _Se não, verifica se é o mesmo DDD (Região);_
+        4. _Se não, verifica se é o mesmo Estado (UF);_
+        5. _Caso contrário, aplica uma taxa fixa para outras localidades._
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Tecnologias Utilizadas
+- `Linguagem:` React Js
+- `Estilização:` CSS
+- `API:` ViaCEP
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📂 Estrutura do Projeto
+- 📂 public              
+- 📂 src
+    -  `App.js`           
+    -  `index.js`         
+    -  📂 components  
+        -  📂 header
+        -  📂 footer
+        -  📂 main
+    - 📂 data
+        - `products.js`
+    - 📂 pages
+        - `catalogo.js`
+        - `contact.js`
+        - `index.js`
+        - `products.js`
+        - `vazio.js`
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🚀 Como Executar
+### Pré-requisitos
+- É necessário ter o Node.js instalado.
