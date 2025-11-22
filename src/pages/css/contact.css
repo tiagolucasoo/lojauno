@@ -1,8 +1,11 @@
-/* --- 1. Estilos do Container Principal --- */
+.contactContainer {
+    width: 100%;
+    min-height: 100vh;
+}
 .contact {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza o formulário horizontalmente */
+    align-items: center;
     padding: 20px;
     min-height: 80vh; 
 }
@@ -13,7 +16,6 @@
     color: #333;
 }
 
-/* --- 2. Estilo dos Blocos de Entrada --- */
 .boxPessoal,
 .boxEmail,
 .boxMotivo,
@@ -32,9 +34,6 @@ label {
     font-size: 1.1rem;
 }
 
-/* --- 3. Campos de Entrada (Input e Textarea) --- */
-
-/* Cor dos campos normais: Sombreado Amarelo */
 input:not([type="date"]),
 input[type="date"],
 textarea {
@@ -47,12 +46,10 @@ textarea {
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-/* Foco dos campos: Tonalidade Amarela */
 input:focus,
 textarea:focus {
-    /* Amarelo/Laranja-Claro para o foco/sombreado */
     border-color: #FFC300; 
-    box-shadow: 0 0 5px rgba(255, 195, 0, 0.5); /* Sombra Amarelada */
+    box-shadow: 0 0 5px rgba(255, 195, 0, 0.5);
     outline: none;
 }
 
@@ -60,8 +57,6 @@ textarea {
     resize: vertical; 
     min-height: 150px;
 }
-
-/* --- 4. Alinhamento Lateral de Campos (Nome e Data) --- */
 
 .boxPessoal {
     display: flex;
@@ -74,12 +69,11 @@ textarea {
     width: 50%;
 }
 
-/* --- 5. Botão de Envio (Verde) --- */
 .enviarForm {
     width: 100%;
     max-width: 600px; 
     padding: 15px;
-    background-color: #04E762; /* Verde Principal */
+    background-color: #04E762;
     color: #000;
     font-size: 1.2rem;
     font-weight: bold;
@@ -91,7 +85,7 @@ textarea {
 }
 
 .enviarForm:hover {
-    background-color: #00B34A; /* Verde Escuro no hover */
+    background-color: #00B34A;
     color: #fff;
     transform: translateY(-2px);
 }

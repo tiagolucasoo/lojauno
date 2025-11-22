@@ -1,4 +1,4 @@
-import { Navigation } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import 'swiper/css';
@@ -13,9 +13,9 @@ function BoxProduct() {
   return (
     <div className="BoxProduct">
       <Swiper
-        modules={[Navigation]}
+        modules={[Pagination]}
         navigation={true}
-        spaceBetween={30}
+        spaceBetween={15}
         loop={true}
         breakpoints={{
           320: {
@@ -36,7 +36,7 @@ function BoxProduct() {
           },
           1280: {
             slidesPerView: 5,
-            spaceBetween: 30
+            spaceBetween: 15
           },
         }}
       >

@@ -5,3 +5,8 @@
 .containerList{
     margin-top: 40px;
 }
+
+.Catalogo{
+    width: 100%;
+    min-height: 100vh;
+}

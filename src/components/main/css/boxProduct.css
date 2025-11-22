@@ -1,7 +1,8 @@
 .BoxProduct {
-    width: 70vw;
-    margin-left: 15vw;
-
+    width: 80vw;
+    margin-left: 10vw;
+    position: relative;
+    padding: 0 50px;
 }
 
 .precoProduto {
@@ -20,7 +21,9 @@
 
 .nomeProduto{
     margin-top: 20px;
-    height: 70px;
+    height: auto;
+    min-height: 100px;
     background-color: transparent;
     flex-wrap: wrap;
 }
+
