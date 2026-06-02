@@ -9,7 +9,7 @@ import Vazio from './pages/vazio';
 function App() {
   return (
     <div className="App">
-      <title>Uno</title>
+      <title>Loja Cards</title>
       <Routes>
         <Route path='/' element= {<Index/>}/>
         <Route path='/catalogo' element = {<Catalogo/>}/>

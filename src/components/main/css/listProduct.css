@@ -1,10 +1,11 @@
-.nomeProduto2{
+.nomeProduto2 {
     font-size: 1rem;
     width: 90%;
     margin: 10px auto;
     text-align: center;
     line-height: 1.2;
-    
+    color: #333;
+    font-weight: 600;
 }
 
 .produtoIndex {
@@ -13,30 +14,34 @@
     object-fit: contain;
     margin-top: 10px;
     margin-bottom: 10px;
-    border: 0px solid #ff0066;
 }
 
-.idProduto, .tagProduto{
-    font-size: 0.8rem;
+.idProduto, .tagProduto {
+    font-size: 0.75rem;
     border-radius: 20px;
-    width: 45%;
-    height: 25px;
-    
+    width: auto;
+    padding: 0 15px;
+    height: 26px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 600;
+    white-space: nowrap;
 }
+
 .idProduto {
-    background-color: #3772FF;
+    background: linear-gradient(135deg, #3772FF 0%, #5C8CFF 100%);
     color: #fff;
+    box-shadow: 0 2px 8px rgba(55,114,255,0.3);
 }
-.tagProduto{
-    background-color: #04E762;
-    color: #000;
+
+.tagProduto {
+    background: linear-gradient(135deg, #04E762 0%, #2EFF7A 100%);
+    color: #1a1a1a;
+    box-shadow: 0 2px 8px rgba(4,231,98,0.3);
 }
 
 .boxList {
-    border: 0px solid #ff0066;
     width: 100%;
     height: 320px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -49,41 +54,34 @@
 
 .boxList:hover {
     border: 2px solid transparent;
-    border-image-source: linear-gradient(
-        93deg,
-        rgba(55, 114, 255, 1) 0%, 
-        rgba(255, 0, 102, 0.77) 64%, 
-        rgba(4, 231, 98, 1) 100%
-    );
+    border-image-source: linear-gradient(93deg, rgba(55,114,255,1) 0%, rgba(255,0,102,0.77) 64%, rgba(4,231,98,1) 100%);
     border-image-slice: 1;
 }
 
-.codigoTag{
+.codigoTag {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 5px;
-    gap: 5%;
+    gap: 8px;
 }
 
 .BoxProduct {
-    width: max-width;
-    max-width: 100%; /* Garante que não ultrapasse a tela */
+    max-width: 100%;
     position: relative;
 }
 
 .BoxProduct .swiper {
     width: 100%;
     height: 100%;
-    padding-top: 10px;     /* Espaço para a borda de hover não cortar */
-    padding-bottom: 40px;  /* Espaço CRÍTICO para a sombra (box-shadow) não sumir */
-    padding-left: 10px;    /* Espaço lateral */
+    padding-top: 10px;
+    padding-bottom: 40px;
+    padding-left: 10px;
     padding-right: 10px;
 }
 
 .swiper-slide {
-    /* Centraliza o card dentro do espaço do slide */
     display: flex;
     justify-content: center;
-    height: auto; /* Deixa a altura se ajustar ao conteúdo */
+    height: auto;
 }

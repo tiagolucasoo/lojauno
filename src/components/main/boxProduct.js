@@ -1,48 +1,58 @@
+import React, { useState, useEffect } from 'react';
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import 'swiper/css';
 import 'swiper/css/navigation';
-
+import 'swiper/css/pagination'; 
 import './css/boxProduct.css';
-
 import { Link } from 'react-router-dom';
-import { products } from "../../data/products";
+import { fetchProdutos, transformProductData } from '../../services/api';
 
 function BoxProduct() {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function loadProducts() {
+      try {
+        const rawData = await fetchProdutos();
+        const formattedData = rawData.map(transformProductData);
+        setProducts(formattedData);
+      } catch (error) {
+        console.error("Erro ao carregar o BoxProduct:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    loadProducts();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="BoxProduct">
+        <h2>Carregando destaques...</h2>
+      </div>
+    );
+  }
+
   return (
     <div className="BoxProduct">
       <Swiper
         modules={[Pagination]}
         navigation={true}
         spaceBetween={15}
-        loop={true}
+        loop={products.length > 5} 
         breakpoints={{
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          480: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 30,
-          },
-          1280: {
-            slidesPerView: 5,
-            spaceBetween: 15
-          },
+          320: { slidesPerView: 1, spaceBetween: 10 },
+          480: { slidesPerView: 2, spaceBetween: 20 },
+          768: { slidesPerView: 3, spaceBetween: 30 },
+          1024: { slidesPerView: 4, spaceBetween: 30 },
+          1280: { slidesPerView: 5, spaceBetween: 15 },
         }}
       >
         
         {products.map((product) => (
-          // O .map() cria um <SwiperSlide> para CADA 'product' no array 'products'
           <SwiperSlide key={product.id}>
             <Link to={`/produto/${product.id}`} className="product-link">
                 <article>

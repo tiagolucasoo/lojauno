@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <title>Uno</title>
+      <title>Loja Cards</title>
       <App />
     </BrowserRouter>
   </React.StrictMode>
